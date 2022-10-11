@@ -54,3 +54,30 @@ comentario_general varchar(255) not null,
 primary key (pk_wap_rsuelo_pro_01)
 )
 
+/**ciclo*/
+CREATE TABLE tb_wap_rciclo_pro_01(
+pk_wap_rciclo_pro_01 INT IDENTITY(1,1),
+fecha datetime unique,
+cultivo_revisado varchar(50) not null,
+rancho_revisado varchar(50) not null,
+#_ciclo float not null,
+tiempo_ciclo float not null,
+#_base float not null,
+status_producto varchar(5) not null,
+presion_riego_valvula float not null,
+presion_riego_cintilla_manguera float not null,
+ph_gotero float not null,
+ce_gotero float not null,
+mililitros_captacion float not null,
+ph_dren float not null,
+ce_dren float not null,
+mililitros_dren float not null,
+porcentaje_humedad float not null,
+evapotranspiracion float not null,
+comentario_general varchar(50) not null
+
+primary key (pk_wap_rciclo_pro_01)
+)
+
+insert into tb_wap_rciclo_pro_01 values('2022-08-10T00:00:00.000Z','0236 cereza', 'casa negra', 5.2, 2.5, 3.5, 'no', 6, 6.2, 8.2, 5.1, 2.2, 2.5, 3.6, 3.9, 10, 5.2, 'habia demasiado calor')
+

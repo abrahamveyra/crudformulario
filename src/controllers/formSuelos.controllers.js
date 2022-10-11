@@ -115,3 +115,17 @@ export const getRegSgetRegSueloByFecha = async (req, res) => {
             res.json({humedad, fecha, cultivo_revisado, rancho_revisado, metodo_aplicacion, status_producto, presion_riego_valvula, presion_riego_cintilla_manguera, ph_gotero, ph_bomba, ph_tierra, ce_gotero, ce_bomba, ce_tierra, evapotranspiracion, comentario_general})
 
         }
+
+        //ciclos
+        export const getRegCiclos = async (req, res) => {
+            try {
+                const pool = await getConnection();
+        const result = await pool.request().query(sueloquery.getAllRegistrosCiclos);
+        res.json(result.recordset);
+        console.log(result)
+            } catch (error) {
+              res.status(500);
+              res.send(error.messsage);  
+            }
+        
+        };

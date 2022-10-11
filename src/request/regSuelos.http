@@ -63,3 +63,9 @@ Content-Type: application/json
     "evapotranspiracion": 5,
     "comentario_general": "Hubo cambio de "
   }
+
+  
+  @api3 = http://localhost:2000/regCiclos
+
+###
+GET {{api3}}

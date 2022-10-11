@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { getRegSuelo, createNewRegSuelo, getRegSgetRegSueloById, getRegSgetRegSueloByFecha, deleteRegistroById, UpdateRegSueloById } from '../controllers/formSuelos.controllers'
+import { getRegSuelo, createNewRegSuelo, getRegSgetRegSueloById, getRegSgetRegSueloByFecha, deleteRegistroById, UpdateRegSueloById, getRegCiclos } from '../controllers/formSuelos.controllers'
 
 const router = Router();
 
@@ -16,3 +16,6 @@ router.delete('/regSuelo/:id', deleteRegistroById)
 router.put('/regSuelo/:id', UpdateRegSueloById)
 
 export default router
+
+//ciclos
+router.get('/regCiclos', getRegCiclos)
