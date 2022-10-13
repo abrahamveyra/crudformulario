@@ -10,7 +10,45 @@ POST {{api}}
 Content-Type: application/json
 
  {
-    "fecha": "2022-10-10T00:00:00.000Z",
+
+   "fecha": "2022-01-10T00:00:00.000Z",
+    "cultivo_revisado": "0236 cereza",
+    "rancho_revisado": "casa negra",
+    "n_ciclo": 5.2,
+    "tiempo_ciclo": 2.5,
+    "n_base": 3.5,
+    "status_producto": "no",
+    "presion_riego_valvula": 6,
+    "presion_riego_cintilla_manguera": 6.2,
+    "ph_gotero": 8.2,
+    "ce_gotero": 5.1,
+    "mililitros_captacion": 2.2,
+    "ph_dren": 2.5,
+    "ce_dren": 3.6,
+    "mililitros_dren": 3.9,
+    "porcentaje_humedad": 10,
+    "evapotranspiracion": 5.2,
+    "comentario_general": "habia demasiado calor"
+  }
+
+###
+
+GET {{api}}/2
+
+###
+
+GET {{api2}}/2022-01-10T00:00:00.000Z
+
+###
+DELETE {{api}}/1
+
+###
+PUT  {{api}}/4
+Content-Type: application/json
+
+ {
+
+   "fecha": "2022-02-10T00:00:00.000Z",
     "cultivo_revisado": "0236 cereza",
     "rancho_revisado": "casa negra",
     "n_ciclo": 5.2,

@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { getAllRegCiclos, createNewRegCiclo } from '../controllers/formCiclos.controllers'
+import { getAllRegCiclos, createNewRegCiclo, getRegCicloById, getRegCicloByFecha, deleteRegCicloById, UpdateRegCicloById } from '../controllers/formCiclos.controllers'
 
 const router = Router();
 
@@ -8,11 +8,11 @@ router.get('/regCiclo', getAllRegCiclos)
 
 router.post('/regCiclo', createNewRegCiclo)
 
-router.get('/regCiclo/:id', )
-router.get('/regCiclofecha/:fecha', )
+router.get('/regCiclo/:id', getRegCicloById)
+router.get('/regCiclofecha/:fecha', getRegCicloByFecha)
 
-router.delete('/regCiclo/:id', )
+router.delete('/regCiclo/:id', deleteRegCicloById)
 
-router.put('/regCiclo/:id', )
+router.put('/regCiclo/:id', UpdateRegCicloById)
 
 export default router
